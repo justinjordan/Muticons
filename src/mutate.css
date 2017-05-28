@@ -1,0 +1,470 @@
+/*! Mutate v0.1.0 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+
+.mut .mut-segment, .mut .mut-mask
+{
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+}
+
+.mut
+{
+	position: relative;
+	overflow: hidden;
+	
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	
+	border: none;
+	outline: none;
+	
+	background-color: #fff;
+	color: #000;
+}
+
+.mut .mut-segment
+{
+	position: absolute;
+	display: block;
+	
+	background-color: #000;
+}
+.mut .mut-mask
+{
+	position: absolute;
+	display: block;
+	
+	background-color: #fff;
+}
+
+
+/*** DEFAULT POSITION ***/
+.mut .mut-segment
+{
+	left: 50%;
+	top: 50%;
+	
+	width: 0%;
+	height: 0%;
+}
+.mut .mut-mask:nth-child(4)
+{
+	left: 0%;
+	top: 0%;
+	
+	width: 0%;
+	height: 0%;
+}
+.mut .mut-mask:nth-child(5)
+{
+	left: 100%;
+	top: 100%;
+	
+	width: 0%;
+	height: 0%;
+}
+
+
+
+
+/*** Bars ***/
+.mut.bars .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 25%;
+	
+	width: 70%;
+	height: 10%;
+}
+.mut.bars .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+	
+	transform: rotate(-180deg);
+}
+.mut.bars .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 65%;
+	
+	width: 70%;
+	height: 10%;
+}
+
+
+
+/*** Check ***/
+.mut.check .mut-segment:nth-child(1)
+{
+	left: 22%;
+	top: 56%;
+	
+	width: 30%;
+	height: 10%;
+	
+	transform: rotate(35deg);
+}
+.mut.check .mut-segment:nth-child(2)
+{
+	left: 22%;
+	top: 56%;
+	
+	width: 30%;
+	height: 10%;
+	
+	transform: rotate(35deg);
+}
+.mut.check .mut-segment:nth-child(3)
+{
+	left: 32%;
+	top: 45%;
+	
+	width: 50%;
+	height: 10%;
+	
+	transform: rotate(-55deg);
+}
+
+
+
+/*** X ***/
+.mut.x .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+	
+	transform: rotate(45deg);
+}
+.mut.x .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+	
+	transform: rotate(45deg);
+}
+.mut.x .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+	
+	transform: rotate(-45deg);
+}
+
+
+
+/*** Minus ***/
+.mut.minus .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+}
+.mut.minus .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+}
+.mut.minus .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 70%;
+	height: 10%;
+}
+
+
+
+/*** Arrow-Right ***/
+.mut.arrow-right .mut-segment:nth-child(1)
+{
+	left: 47%;
+	top: 34%;
+	transform: rotate(45deg);
+	
+	width: 40%;
+	height: 10%;
+}
+.mut.arrow-right .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 45%;
+	
+	width: 60%;
+	height: 10%;
+}
+.mut.arrow-right .mut-segment:nth-child(3)
+{
+	left: 47%;
+	top: 56%;
+	transform: rotate(-45deg);
+	
+	width: 40%;
+	height: 10%;
+}
+
+
+
+/*** Arrow-Left ***/
+.mut.arrow-left .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 34%;
+	transform: rotate(-45deg);
+	
+	width: 40%;
+	height: 10%;
+}
+.mut.arrow-left .mut-segment:nth-child(2)
+{
+	left: 25%;
+	top: 45%;
+	
+	width: 60%;
+	height: 10%;
+}
+.mut.arrow-left .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 56%;
+	transform: rotate(45deg);
+	
+	width: 40%;
+	height: 10%;
+}
+
+
+
+/*** Circle ***/
+.mut.circle .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+.mut.circle .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+.mut.circle .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+
+
+
+/*** Circle-O ***/
+.mut.circle-o .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+.mut.circle-o .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+.mut.circle-o .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 15%;
+	
+	width: 70%;
+	height: 70%;
+	
+	border-radius: 50%;
+}
+.mut.circle-o .mut-mask:nth-child(4)
+{
+	left: 28%;
+	top: 28%;
+	
+	width: 44%;
+	height: 44%;
+	
+	border-radius: 50%;
+}
+.mut.circle-o .mut-mask:nth-child(5)
+{
+	left: 28%;
+	top: 28%;
+	
+	width: 44%;
+	height: 44%;
+	
+	border-radius: 50%;
+}
+
+
+
+/*** Square ***/
+.mut.square .mut-segment:nth-child(1),
+.mut.stop .mut-segment:nth-child(1)
+{
+	left: 20%;
+	top: 20%;
+	
+	width: 60%;
+	height: 60%;
+}
+.mut.square .mut-segment:nth-child(2),
+.mut.stop .mut-segment:nth-child(2)
+{
+	left: 20%;
+	top: 20%;
+	
+	width: 60%;
+	height: 60%;
+}
+.mut.square .mut-segment:nth-child(3),
+.mut.stop .mut-segment:nth-child(3)
+{
+	left: 20%;
+	top: 20%;
+	
+	width: 60%;
+	height: 60%;
+}
+
+
+
+/*** Play ***/
+.mut.play .mut-segment:nth-child(1)
+{
+	left: 15%;
+	top: 25%;
+	
+	width: 70%;
+	height: 55%;
+	
+	transform: rotate(90deg);
+}
+.mut.play .mut-segment:nth-child(2)
+{
+	left: 15%;
+	top: 25%;
+	
+	width: 70%;
+	height: 55%;
+	
+	transform: rotate(90deg);
+}
+.mut.play .mut-segment:nth-child(3)
+{
+	left: 15%;
+	top: 25%;
+	
+	width: 70%;
+	height: 55%;
+	
+	transform: rotate(90deg);
+}
+.mut.play .mut-mask:nth-child(4)
+{
+	left: 0%;
+	top: -20%;
+	
+	width: 100%;
+	height: 50%;
+	
+	transform: rotate(30deg);
+	
+	background-color: #000;
+}
+.mut.play .mut-mask:nth-child(5)
+{
+	left: 0%;
+	top: 70%;
+	
+	width: 100%;
+	height: 50%;
+	
+	transform: rotate(-30deg);
+	
+	background-color: #000;
+}
+
+
+
+/*** Pause ***/
+.mut.pause .mut-segment:nth-child(1)
+{
+	left: 20%;
+	top: 20%;
+	
+	width: 22%;
+	height: 60%;
+}
+.mut.pause .mut-segment:nth-child(2)
+{
+	left: 20%;
+	top: 20%;
+	
+	width: 22%;
+	height: 60%;
+}
+.mut.pause .mut-segment:nth-child(3)
+{
+	left: 58%;
+	top: 20%;
+	
+	width: 22%;
+	height: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
