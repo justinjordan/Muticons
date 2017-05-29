@@ -128,7 +128,7 @@ Or you can just use CSS like so:
 
 ## Mutate Attributes
 |Attribute Name	|Description		|Example				|
-|:-------------:|:-----------------:|:---------------------:|
+|---------------|-------------------|-----------------------|
 |mut-fg			|Foreground color.	|`mut-fg="#0f0"`		|
 |mut-bg			|Background color.	|`mut-bg="#0cf"`		|
 |mut-size		|Button size.		|`mut-size="20px"`		|
