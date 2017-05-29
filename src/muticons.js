@@ -4,11 +4,6 @@ window.Muticons = new (function()
 {
 	var _this = this;
 	
-	this.test = function(state)
-	{
-		console.log(state);
-	};
-	
 	this.init = function()
 	{
 		var elements = document.getElementsByClassName("mut");
@@ -105,7 +100,7 @@ window.Muticons = new (function()
 			}
 			
 			// Add API
-			el.transform = function(s)
+			el.mutate = function(s)
 			{
 				var stateName	= this.states[this.state];
 				var nextState	= this.state + 1;
@@ -134,7 +129,7 @@ window.Muticons = new (function()
 			// Add Click Function
 			el.onclick = function()
 			{
-				this.transform();
+				this.mutate();
 			};
 		}
 	};
