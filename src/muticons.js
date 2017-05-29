@@ -1,4 +1,4 @@
-/*! Muticons v0.1.0 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.1 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
@@ -83,7 +83,13 @@ window.Muticons = new (function()
 					break;
 					
 					case 'mut-duration':
-						var shapes = el.getElementsByClassName('mut-segment mut-mask');
+						var shapes = el.getElementsByClassName('mut-segment');
+						for (var j in shapes)
+						{
+							if (typeof shapes[j] === 'object')
+								{ shapes[j].style.transitionDuration = v; }
+						}
+						shapes = el.getElementsByClassName('mut-mask');
 						for (var j in shapes)
 						{
 							if (typeof shapes[j] === 'object')
