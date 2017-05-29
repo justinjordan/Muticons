@@ -1,4 +1,4 @@
-/*! Muticons v0.1.1 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.2 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
@@ -100,7 +100,7 @@ window.Muticons = new (function()
 			}
 			
 			// Add API
-			el.mutate = function(s)
+			var mutate = function(s)
 			{
 				var stateName	= this.states[this.state];
 				var nextState	= this.state + 1;
@@ -125,6 +125,19 @@ window.Muticons = new (function()
 				if (typeof callback === 'function')
 					{ callback(stateName); }
 			};
+			
+			// Add Mutate to Element
+			el.mutate = mutate;
+			
+			// Add Jquery Compatibility
+			if (typeof jQuery === 'function')
+			{
+				jQuery.fn.extend({
+				  mutate: function() {
+				    return this.each(mutate);
+				  }
+				});
+			}
 			
 			// Add Click Function
 			el.onclick = function()
