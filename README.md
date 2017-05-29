@@ -89,7 +89,11 @@ window.mycallback = function(mutation)
 ```
 
 ```html
-<button type="button" class="mut mut-bars--x" mut-callback="mycallback"></button>
+<button
+	type="button"
+	class="mut mut-bars--x"
+	mut-callback="mycallback"
+></button>
 ```
 
 
@@ -98,13 +102,23 @@ window.mycallback = function(mutation)
 There's a couple ways to change the button's colors. You can use the custom attributes `mut-bg` and `mut-fg` like this:
 
 ```html
-<button type="button" class="mut mut-circle-o--check" mut-bg="#0cf" mut-fg="#0f0"></button>
+<button
+	type="button"
+	class="mut mut-circle-o--check"
+	mut-bg="#0cf"
+	mut-fg="#0f0"
+></button>
 ```
 
 Or you can just use CSS like so:
 
 ```html
-<button type="button" id="mybutton" class="mut mut-circle-o--check" style="background-color: #0cf; color: #0f0;"></button>
+<button
+	type="button"
+	id="mybutton"
+	class="mut mut-circle-o--check"
+	style="background-color: #0cf; color: #0f0;"
+></button>
 ```
 
 **Notes:**
