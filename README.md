@@ -36,34 +36,6 @@ Not entirely sure why you'd want to do this, but that doesn't mean you shouldn't
 ```
 
 
-### Mutation List
-|Name			|Icon			|
-|---------------|---------------|
-|bars			|![bars]		|
-|check			|![check]		|
-|x				|![x]			|
-|minus			|![minus]		|
-|arrow-right	|![arrow-right]	|
-|arrow-left		|![arrow-left]	|
-|circle			|![circle]		|
-|circle-o		|![circle-o]	|
-|square (stop)	|![square]		|
-|play			|![play]		|
-|pause			|![pause]		|
-
-[bars]: images/bars.png
-[check]: images/check.png
-[x]: images/x.png
-[minus]: images/minus.png
-[arrow-right]: images/arrow-right.png
-[arrow-left]: images/arrow-left.png
-[circle]: images/circle.png
-[circle-o]: images/circle-o.png
-[square]: images/square.png
-[play]: images/play.png
-[pause]: images/pause.png
-
-
 ### Javascript Integration
 
 To handle click events, you can assign a callback function to the `mut-callback` attribute. This feature can be used like this:
@@ -124,6 +96,43 @@ Or you can just use CSS like so:
 **Notes:**
 * If you need to change the foreground color after page load, you'll have to set the `background-color` of the `.mut-segment` elements.
 * Some of the mutations, such as `circle-o`, can't have a transparent background because they use masking elements to make their shapes.
+
+
+## Mutation List
+|Mutation Name	|Icon			|
+|:-------------:|:-------------:|
+|bars			|![bars]		|
+|check			|![check]		|
+|x				|![x]			|
+|minus			|![minus]		|
+|arrow-right	|![arrow-right]	|
+|arrow-left		|![arrow-left]	|
+|circle			|![circle]		|
+|circle-o		|![circle-o]	|
+|square (stop)	|![square]		|
+|play			|![play]		|
+|pause			|![pause]		|
+
+[bars]: images/bars.png
+[check]: images/check.png
+[x]: images/x.png
+[minus]: images/minus.png
+[arrow-right]: images/arrow-right.png
+[arrow-left]: images/arrow-left.png
+[circle]: images/circle.png
+[circle-o]: images/circle-o.png
+[square]: images/square.png
+[play]: images/play.png
+[pause]: images/pause.png
+
+
+## Mutate Attributes
+|Attribute Name	|Description		|Example				|
+|:-------------:|:-----------------:|:---------------------:|
+|mut-fg			|Foreground color.	|`mut-fg="#0f0"`		|
+|mut-bg			|Background color.	|`mut-bg="#0cf"`		|
+|mut-size		|Button size.		|`mut-size="20px"`		|
+|mut-duration	|Animation duration.|`mut-duration="0.5s"`	|
 
 
 
