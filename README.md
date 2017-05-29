@@ -1,10 +1,10 @@
-# Mutate
+# Muticon
 An easy to use library for creating animated buttons, or "material" buttons as the cool kids are calling it.
 
 
 ## Usage:
 
-To start, you must include the Mutate CSS and JS files. Next, create an element and give it the `mut` class. To assign an icon, add a second class that starts with `mut-` followed by the name of the icon. For example, if you'd like to make the classic "hamburger" mobile navigation button, use this markup:
+To start, you must include the Muticon CSS and JS files. Next, create an element and give it the `mut` class. To assign an icon, add a second class that starts with `mut-` followed by the name of the icon. For example, if you'd like to make the classic "hamburger" mobile navigation button, use this markup:
 
 ```html
 <button type="button" class="mut mut-bars"></button>
@@ -15,13 +15,13 @@ Well that's cool, but it doesn't really accomplish anything you couldn't have do
 
 ### Making a Mutation
 
-Here's where it gets fun. If you'd like your mobile navigation button to mutate into an X when clicked, you simply append a new icon name ("x" in this case) onto the second class separated with `--`. For example:
+Here's where it gets fun. If you'd like your mobile navigation button to Muticon into an X when clicked, you simply append a new icon name ("x" in this case) onto the second class separated with `--`. For example:
 
 ```html
 <button type="button" class="mut mut-bars--x"></button>
 ```
 
-This button will start as a mobile navigation icon, then, when clicked, it'll mutate into an X. Dead simple!
+This button will start as a mobile navigation icon, then, when clicked, it'll Muticon into an X. Dead simple!
 
 
 ### Multiple Mutations
@@ -126,7 +126,7 @@ Or you can just use CSS like so:
 [pause]: images/pause.png
 
 
-## Mutate Attributes
+## Muticon Attributes
 |Attribute Name	|Description		|Example				|
 |---------------|-------------------|-----------------------|
 |mut-fg			|Foreground color.	|`mut-fg="#0f0"`		|

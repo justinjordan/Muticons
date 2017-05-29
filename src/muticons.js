@@ -1,6 +1,6 @@
-/*! Mutate v0.1.0 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.0 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
-window.Mutate = new (function()
+window.Muticons = new (function()
 {
 	var _this = this;
 	
@@ -134,4 +134,4 @@ window.Mutate = new (function()
 	};
 });
 
-window.onload = window.Mutate.init;
+window.onload = window.Muticons.init;
