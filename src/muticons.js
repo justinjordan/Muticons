@@ -1,4 +1,4 @@
-/*! Muticons v0.1.2 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.3 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
@@ -140,10 +140,15 @@ window.Muticons = new (function()
 			}
 			
 			// Add Click Function
+			el.addEventListener("click", function() {
+				this.mutate();
+			});
+/*
 			el.onclick = function()
 			{
 				this.mutate();
 			};
+*/
 		}
 	};
 });
