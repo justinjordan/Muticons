@@ -1,4 +1,4 @@
-/*! Muticons v0.1.3 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.4 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
@@ -11,6 +11,11 @@ window.Muticons = new (function()
 		for (var x in elements)
 		{	
 			var el = elements[x];
+			
+			if (el.muticons_init)
+				{ continue; }
+			else
+				{ el.muticons_init = true; }
 			
 			if (typeof el !== 'object')
 				{ continue; }
@@ -102,21 +107,54 @@ window.Muticons = new (function()
 			// Add API
 			var mutate = function(s)
 			{
-				var stateName	= this.states[this.state];
-				var nextState	= this.state + 1;
-				nextState		= nextState < this.states.length ? nextState : 0;
-				var nextStateName = this.states[nextState];
+				console.log(s);
+				var stateName, nextState, nextStateName, newClass, callbackPath, callback;
 				
-				var newClass = this.className.replace(new RegExp('(?:^|\\s)'+ stateName + '(?:\\s|$)'), '   '+nextStateName+' ');
+				stateName		= this.states[this.state];
+				
+				if (s)
+				{
+					// mutation specified
+					switch (typeof s)
+					{
+						case 'number':
+							nextState		= s;
+							nextState		= nextState < this.states.length ? nextState : 0;
+						break;
+						
+						case 'string':
+							var index = this.states.indexOf(s);
+							
+							if (stateIndex >= 0)
+							{
+								nextState = index;
+							}
+							else
+							{
+								console.error("Couldn't mutate to '"+s+"' because it's not defined in element.");
+								return;
+							}
+						break;
+					}
+				}
+				else
+				{
+					// Increment to next mutation
+					nextState		= this.state + 1;
+					nextState		= nextState < this.states.length ? nextState : 0;
+					nextStateName	= this.states[nextState];
+				}
+				
+				newClass = this.className.replace(new RegExp('(?:^|\\s)'+ stateName + '(?:\\s|$)'), '   '+nextStateName+' ');
 				newClass = newClass.trim().replace(/[\s]{2,}/g, ' ');
 				
 				this.className = newClass;
 				this.state = nextState;
 				
 				// Fire Callback
-				var callbackPath = this.getAttribute('mut-callback');
+				callbackPath = this.getAttribute('mut-callback');
 				callbackPath = typeof callbackPath === 'string' ? callbackPath.trim().replace(/^window\./, '').split('.') : [];
-				var callback = callbackPath.length > 0 ? window : null;
+				callback = callbackPath.length > 0 ? window : null;
 				for (var i in callbackPath)
 				{
 					if (typeof callback[callbackPath[i]] !== 'undefined')
@@ -143,12 +181,6 @@ window.Muticons = new (function()
 			el.addEventListener("click", function() {
 				this.mutate();
 			});
-/*
-			el.onclick = function()
-			{
-				this.mutate();
-			};
-*/
 		}
 	};
 });
