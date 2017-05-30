@@ -1,4 +1,4 @@
-/*! Muticons v0.1.4 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.5 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
@@ -107,10 +107,9 @@ window.Muticons = new (function()
 			// Add API
 			var mutate = function(s)
 			{
-				console.log(s);
 				var stateName, nextState, nextStateName, newClass, callbackPath, callback;
 				
-				stateName		= this.states[this.state];
+				stateName = this.states[this.state];
 				
 				if (s)
 				{
@@ -124,14 +123,13 @@ window.Muticons = new (function()
 						
 						case 'string':
 							var index = this.states.indexOf(s);
-							
-							if (stateIndex >= 0)
+							if (index >= 0)
 							{
 								nextState = index;
 							}
 							else
 							{
-								console.error("Couldn't mutate to '"+s+"' because it's not defined in element.");
+								console.error("Couldn't mutate to '"+s+"' because it's not a mutation defined in the element.");
 								return;
 							}
 						break;
@@ -142,9 +140,9 @@ window.Muticons = new (function()
 					// Increment to next mutation
 					nextState		= this.state + 1;
 					nextState		= nextState < this.states.length ? nextState : 0;
-					nextStateName	= this.states[nextState];
 				}
 				
+				nextStateName	= this.states[nextState];
 				newClass = this.className.replace(new RegExp('(?:^|\\s)'+ stateName + '(?:\\s|$)'), '   '+nextStateName+' ');
 				newClass = newClass.trim().replace(/[\s]{2,}/g, ' ');
 				
@@ -171,8 +169,10 @@ window.Muticons = new (function()
 			if (typeof jQuery === 'function')
 			{
 				jQuery.fn.extend({
-				  mutate: function() {
-				    return this.each(mutate);
+				  mutate: function(s) {
+				    return this.each(function() {
+						this.mutate(s);
+				    });
 				  }
 				});
 			}
