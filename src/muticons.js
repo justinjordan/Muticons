@@ -9,7 +9,7 @@ window.Muticons = new (function()
 		var elements = document.getElementsByClassName("mut");
 		
 		for (var x in elements)
-		{	
+		{
 			var el = elements[x];
 			
 			if (el.muticons_init)

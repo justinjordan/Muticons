@@ -15,7 +15,7 @@ Well that's cool, but it doesn't really accomplish anything you couldn't have do
 
 ### Making a Mutation
 
-Here's where it gets fun. If you'd like your mobile navigation button to Muticons into an X when clicked, you simply append a new icon name ("x" in this case) onto the second class separated with `--`. For example:
+Here's where it gets fun. If you'd like your mobile navigation button to mutate into an X when clicked, you simply append a new icon name ("x" in this case) onto the second class separated with `--`. For example:
 
 ```html
 <button type="button" class="mut mut-bars--x"></button>
