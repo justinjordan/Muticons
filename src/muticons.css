@@ -1,4 +1,4 @@
-/*! Muticons v0.1.5 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.6 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 .mut .mut-segment, .mut .mut-mask
 {
@@ -199,7 +199,7 @@
 .mut.arrow-right .mut-segment:nth-child(1)
 {
 	left: 47%;
-	top: 34%;
+	top: 33.9%;
 	transform: rotate(45deg);
 	
 	width: 40%;
@@ -216,7 +216,7 @@
 .mut.arrow-right .mut-segment:nth-child(3)
 {
 	left: 47%;
-	top: 56%;
+	top: 56.1%;
 	transform: rotate(-45deg);
 	
 	width: 40%;
@@ -459,8 +459,57 @@
 }
 
 
+/*** Search ***/
+.mut.search .mut-segment:nth-child(1)
+{
+	left: 16%;
+	top: 10%;
 
+	width: 50%;
+	height: 50%;
 
+	border-radius: 50%;
+}
+.mut.search .mut-segment:nth-child(2)
+{
+	left: 60%;
+	top: 50%;
+
+	width: 12%;
+	height: 40%;
+	
+	transform: rotate(-35deg);
+}
+.mut.search .mut-segment:nth-child(3)
+{
+	left: 16%;
+	top: 10%;
+
+	width: 50%;
+	height: 50%;
+
+	border-radius: 50%;
+}
+.mut.search .mut-mask:nth-child(4)
+{
+	left: 26%;
+	top: 20%;
+
+	width: 30%;
+	height: 30%;
+
+	border-radius: 50%;
+}
+.mut.search .mut-mask:nth-child(5)
+{
+	left: 26%;
+	top: 20%;
+
+	width: 30%;
+	height: 30%;
+
+	border-radius: 50%;
+}
 
 
 

@@ -1,4 +1,4 @@
-/*! Muticons v0.1.5 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+/*! Muticons v0.1.6 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
 
 window.Muticons = new (function()
 {
