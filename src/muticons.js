@@ -105,7 +105,7 @@ window.Muticons = new (function()
 			}
 			
 			// Add API
-			var mutate = function(s)
+			var mutate = function(s, obj)
 			{
 				var stateName, nextState, nextStateName, newClass, callbackPath, callback;
 				
@@ -159,7 +159,7 @@ window.Muticons = new (function()
 						{ callback = callback[callbackPath[i]]; }
 				}
 				if (typeof callback === 'function')
-					{ callback(stateName); }
+					{ callback(stateName, obj); }
 			};
 			
 			// Add Mutate to Element
@@ -179,7 +179,7 @@ window.Muticons = new (function()
 			
 			// Add Click Function
 			el.addEventListener("click", function() {
-				this.mutate();
+				this.mutate(null, this);
 			});
 		}
 	};
