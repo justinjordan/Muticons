@@ -463,7 +463,7 @@
 .mut.search .mut-segment:nth-child(1)
 {
 	left: 16%;
-	top: 10%;
+	top: 12%;
 
 	width: 50%;
 	height: 50%;
@@ -472,28 +472,21 @@
 }
 .mut.search .mut-segment:nth-child(2)
 {
-	left: 60%;
-	top: 50%;
+	left: 46%;
+	top: 65%;
 
-	width: 12%;
-	height: 40%;
+	width: 38%;
+	height: 12%;
 	
-	transform: rotate(-35deg);
+	transform: rotate(-125deg);
 }
 .mut.search .mut-segment:nth-child(3)
 {
-	left: 16%;
-	top: 10%;
-
-	width: 50%;
-	height: 50%;
-
-	border-radius: 50%;
 }
 .mut.search .mut-mask:nth-child(4)
 {
 	left: 26%;
-	top: 20%;
+	top: 22%;
 
 	width: 30%;
 	height: 30%;
@@ -502,13 +495,6 @@
 }
 .mut.search .mut-mask:nth-child(5)
 {
-	left: 26%;
-	top: 20%;
-
-	width: 30%;
-	height: 30%;
-
-	border-radius: 50%;
 }
 
 
