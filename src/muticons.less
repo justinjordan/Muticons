@@ -1,0 +1,70 @@
+/*! Muticons v0.1.6 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+
+.mut
+{
+	position: relative;
+	overflow: hidden;
+	
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	
+	border: none;
+	outline: none;
+	
+	background-color: #fff;
+	color: #000;
+	
+	.mut-segment, .mut-mask
+	{
+		transition-property: all;
+		transition-duration: 0.3s;
+		transition-timing-function: ease;
+	}
+	
+	.mut-segment
+	{
+		position: absolute;
+		display: block;
+		
+		background-color: #000;
+		
+		left: 50%;
+		top: 50%;
+		
+		width: 0%;
+		height: 0%;
+	}
+	.mut-mask
+	{
+		position: absolute;
+		display: block;
+		
+		background-color: #fff;
+		
+		&:nth-child(4)
+		{
+			left: 0%;
+			top: 0%;
+			
+			width: 0%;
+			height: 0%;
+		}
+		&:nth-child(5)
+		{
+			left: 100%;
+			top: 100%;
+			
+			width: 0%;
+			height: 0%;
+		}
+	}
+}
+
+/*** DEFAULT POSITION ***/
+.mut .mut-segment
+{
+	
+}
+
