@@ -135,7 +135,7 @@ Or you can just use CSS like this:
 |---------------|-------------------------------------------|-------------------------------------------|
 |mut-fg			|Foreground color.							|`mut-fg="#0f0"`							|
 |mut-bg			|Background color.							|`mut-bg="#0cf"`							|
-|mut-size		|Button size.								|`mut-size="20px"`							|
+|mut-size		|Button size. (square)						|`mut-size="20px"`							|
 |mut-duration	|Animation duration.						|`mut-duration="0.5s"`						|
 |mut-callback	|Assign a function to be called on click.	|`mut-callback="myApp.myCallbackFunction"`	|
 
