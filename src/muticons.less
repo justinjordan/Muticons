@@ -1,7 +1,19 @@
-/*! Muticons v0.1.6 - (c) Justin Jordan - www.opensource.org/licenses/MIT */
+@import './icons/arrow-down';
+@import './icons/arrow-left';
+@import './icons/arrow-right';
+@import './icons/arrow-up';
+@import './icons/bars';
+@import './icons/check';
+@import './icons/circle-o';
+@import './icons/circle';
+@import './icons/minus';
+@import './icons/pause';
+@import './icons/play';
+@import './icons/search';
+@import './icons/stop';
+@import './icons/x';
 
-.mut
-{
+.mut {
 	position: relative;
 	overflow: hidden;
 	
@@ -16,15 +28,13 @@
 	background-color: #fff;
 	color: #000;
 	
-	.mut-segment, .mut-mask
-	{
+	.mut-segment, .mut-mask {
 		transition-property: all;
 		transition-duration: 0.3s;
 		transition-timing-function: ease;
 	}
 	
-	.mut-segment
-	{
+	.mut-segment {
 		position: absolute;
 		display: block;
 		
@@ -36,23 +46,20 @@
 		width: 0%;
 		height: 0%;
 	}
-	.mut-mask
-	{
+	.mut-mask {
 		position: absolute;
 		display: block;
 		
 		background-color: #fff;
 		
-		&:nth-child(4)
-		{
+		&:nth-child(4) {
 			left: 0%;
 			top: 0%;
 			
 			width: 0%;
 			height: 0%;
 		}
-		&:nth-child(5)
-		{
+		&:nth-child(5) {
 			left: 100%;
 			top: 100%;
 			
@@ -60,11 +67,5 @@
 			height: 0%;
 		}
 	}
-}
-
-/*** DEFAULT POSITION ***/
-.mut .mut-segment
-{
-	
 }
 

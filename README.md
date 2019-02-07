@@ -1,5 +1,5 @@
 # Muticons
-An easy to use library for creating animated buttons, or "material" buttons as the cool kids are calling it.
+An easy to use library for creating animated buttons.
 
 
 ## Usage:
